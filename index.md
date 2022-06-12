@@ -78,6 +78,52 @@ This is what a lottery notification looks like
 
 Make sure you open chat and click it so you don't miss it!
 
+## Making Shops
+The general process to make a shop follows three steps.
+ 1. Buy a plot of land to create a shop
+ 2. Gather supplies and resupply said shop
+ 3. Create a shop sign on a chest in your land
+
+To buy a plot of land, please contact me on Discord at **jayphen#6666**. Specify the area you want your land to be in, and I'll give you a quote for the price of that land. Please note that the closer your land is to spawn, the cheaper it is.
+
+I understand that this is inconvenient, and it might change in the future, but there are benefits of this approach
+- Helps halt land claim abuse
+- Users don't have to fuss with (frankly really poorly made) land claim plugins
+
+You should still be able to sell your land to others automatically, but exactly how this will happen has not been determined as of yet.
+
+Anyway, after you gather supplies, you should put a sign on your chest and format it like this, I understand that it might be inconvenient, but I deem it the best approach.
+
+![alt](5.png)
+
+This might seem confusing, but let's explain it, line-by-line.
+
+When creating a sign, always leave the first line empty.
+
+The second line specifies the quantity you want to sell, in that example, they are selling `64` items at a time.
+
+With the next line, you specify the buy and sell price. `B` for `Buy`, then the amount of money the buy price is. **This is how much money you will make when someone goes to buy it off of you**. Then there's `S` for `Sell` **This is the amount of money you'll give them for the item**, if you don't want to give them anything for the item, just type `S free`
+
+Lastly, the `?` is for you writing which item you want to sell, if you leave this as `?` it will automatically determine the item you want to sell.
+
+Generally, follow this format.
+```
+// leave blank //
+%AMOUNT OF ITEMS YOU WANT TO SELL AT A TIME%
+B %PRICE YOU'LL SELL IT FOR% : S %PRICE YOU'LL BUY IT FOR%
+?
+```
+
+As a specific example if that literally made no sense, say I wanted to sell 10 diamonds for $3 each, and if someone wanted to give me diamonds, I'd pay them $1 for 10 diamonds, I could make a sign that looks like this.
+```
+ 
+10
+B 3: S 1
+?
+```
+
+You'll get a notification when someone buys your item.
+
 ## How can I be added to the whitelist?
 DM **jayphen#6666**.
 
