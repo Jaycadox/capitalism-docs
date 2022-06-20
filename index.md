@@ -7,15 +7,15 @@ The goal is to be the first to reach **$1,000,000,000**.
 The first time you connect, you will recieve **$1,000,000**.
 
 There are a few ways to make money, they go as follows.
-## Shops (not implemented yet)
-If you buy an area of land (in the shop district) and decide to put a sign with a specific format (details TBD) on a chest, you can sell in-game items to other players for a set price.
+## Shops
+If you buy an area of land (in the shop district) and decide to put a sign with a specific format on a chest, you can sell in-game items to other players for a set price.
 
 
 ## Playtime rewards
 Every ~25 minutes, the server broadcasts a playtime reward. If you click the message, you get **$100,000**. You have 30 seconds to click the message, else it expires.
 
 ## Lottery
-Every (timeframe not determined) minutes, the server broadcasts a lottery. If you click the message, you are entered. You also get notified about an active lottery whenever you log in. The maximum amount of money that a lottery can give is **$1,000,000**. Details about how the amount of money in a lottery is determined later.
+Everyday, at around 5-6PM minutes, the server broadcasts a lottery. If you click the message, you are entered. You also get notified about an active lottery whenever you log in. The maximum amount of money that a lottery can give is **$1,000,000**. Details about how the amount of money in a lottery is determined later.
 
 # Specifics
 More specific information.
@@ -57,7 +57,7 @@ This means you don't have enough money to send to the specific player. But other
 Please note that you cannot view the balance of another player.
 
 ## The Lottery
-The server stores it's own bank account. This bank account is sent money from Death Tax (TBD), Transaction Tax (TBD), and property sales.
+The server stores it's own bank account. This bank account is sent money from Death Tax, Transaction Tax, and property sales.
 
 Everyday, **at around 5-6PM AEST**. The lottery will randomly select a winner out of the people who have entered. **You need to be online when it rolls for it to select you, it does NOT select an offline player**.
 
@@ -77,6 +77,68 @@ This is what a lottery notification looks like
 - The moment after the lottery rolls (if the bank can afford it)
 
 Make sure you open chat and click it so you don't miss it!
+
+## Taxes 
+### Aren't taxes fun!! 😄
+
+Currently there are two forms of tax. Death Tax and Transaction Tax. Each follows different rules around what percentage of a certain amount of money should be taxed given certain conditions.
+<div style="display: flex">
+<div>
+
+### Death tax (**Not using brackets**)
+
+<table>
+  <tr>
+    <th>Balance ($)</th>
+    <th>Tax (%)</th>
+  </tr>
+  <tr>
+    <td>0-999,999</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1,000,000-9,999,999</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>10,000,000-99,999,999</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>100,000,000-899,999,999</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>900,000,000-1,000,000,000</td>
+    <td>15</td>
+  </tr>
+</table> 
+</div>
+<div style="margin-left: 50px;">
+
+### Transaction tax (**Using brackets**)
+
+<table>
+  <tr>
+    <th>Balance ($)</th>
+    <th>Tax (%)</th>
+  </tr>
+  <tr>
+    <td>0-20,000,000</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>>20,000,000</td>
+    <td>0</td>
+  </tr>
+</table> 
+</div>
+</div>
+
+As one can see, every dollar over 20 million sent through a transaction will not be taxed. This has been done to encorage larger and wholesale transactions between players.
+
+### Where does my taxed money go?
+It goes towards the same bank that hosts lotteries. Which is just generally the "server bank". Money that goes in this account would be redistributed to players.
 
 ## Making Shops
 The general process to make a shop follows three steps.
