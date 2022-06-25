@@ -1,6 +1,10 @@
-# Capitalism
+<div style="max-width: 1000px; margin: 0 auto;">
+<div style="text-align: center">
 
+# Capitalism
 Basic documenation and usage guide.
+</div>
+
 
 ## Quick start
 The goal is to be the first to reach **$1,000,000,000**.
@@ -15,10 +19,14 @@ If you buy an area of land (in the shop district) and decide to put a sign with 
 Every ~25 minutes, the server broadcasts a playtime reward. If you click the message, you get **$100,000**. You have 30 seconds to click the message, else it expires.
 
 ## Lottery
-Everyday, at around 5-6PM minutes, the server broadcasts a lottery. If you click the message, you are entered. You also get notified about an active lottery whenever you log in. The maximum amount of money that a lottery can give is **$1,000,000**. Details about how the amount of money in a lottery is determined later.
+Everyday, at around 5-6PM AEST, the server broadcasts a lottery. If you click the message, you are entered. You also get notified about an active lottery whenever you log in. The maximum amount of money that a lottery can give is **$1,000,000**.
 
-# Specifics
-More specific information.
+<div style="text-align: center">
+
+# Documentation
+General documentation
+</div>
+
 
 ## Commands
 ### /balance
@@ -28,7 +36,20 @@ Can also be typed as
 This will display how much money you have. Example:
 
 ![showcase](1.png)
+### /profile
+Can also be typed as
+ - p
+ - prof
+ - self
 
+This command opens your player profile menu where you can manage land claims and view your stats.
+
+### /landlord
+Can also be typed as
+ - land
+ - l
+
+Whilst standing inside one of your claims, you can type this command to open the management menu for your land claim.
 ### /pay
 Can also be typed as
  - send
@@ -82,7 +103,7 @@ Make sure you open chat and click it so you don't miss it!
 ### Aren't taxes fun!! 😄
 
 Currently there are two forms of tax. Death Tax and Transaction Tax. Each follows different rules around what percentage of a certain amount of money should be taxed given certain conditions.
-<div style="display: flex">
+<div style="display: flex; margin: 0 auto; width: 100%;">
 <div>
 
 ### Death tax (**Not using brackets**)
@@ -140,58 +161,69 @@ As one can see, every dollar over 20 million sent through a transaction will not
 ### Where does my taxed money go?
 It goes towards the same bank that hosts lotteries. Which is just generally the "server bank". Money that goes in this account would be redistributed to players.
 
-## Making Shops
-The general process to make a shop follows three steps.
+## Regions
+There are 3 types of regions for our world (which would have a word border size of -5000 to 5000).
+- Commercial (below 500 blocks away from 0, 0)
+  - Owning property here allows you to make shops, please note that you should not live in a commercial property.
+  - You cannot place beds in commercial property.
+  - Commercial property has a size limitation of 18x18, but that might change later.
+- Residential (500-2000 blocks away from 0, 0)
+  - Essentially no hard-line restrictions except for the fact that shops cannot operate here
+- Unclaimable (2000+ blocks away from 0, 0)
+  - No land can be claimed in this region
+
+Regions are measured in a circle from spawn, this means it could be hard to know where you are within a region, but you will get an Action Bar notification when you cross a region.
+
+## What is claimed land?
+Claimed land is an area of land that you can purchase. Other players cannot grief or steal items from your land claim. This is perfect if you want to create a house, a farm, or a shop.
+
+If you want to work with your friends and still want them to be able to interact with your plot of land, you can add them to the Trusted Players list, by using the `/landlord` command. This land can also be transfered or sold to another player.
+
+Whilst I have tried my best to prevent griefing in land claims, it is also against the server rules to grief a land claim (if one can manage to find a bypass).
+
+I do not condone griefing someones base if it's not claimed, but ultimately, it's not against the rules and you probably won't be punished.
+
+## What is a shop?
+A shop is a land claim in the Commercial Region. Once you own a shop, you can sell items from chests to other players. This is the best way to make money on the server.
+
+If you sell your items for cheap enough, you'll appear on the global leaderboard as the person selling a certain item for the cheapest price, which would be a good way to gain some publicity!
+
+## What's the difference between a shop and a land claim?
+They're the same thing. The only difference is the region that they're located in.
+
+
+## Making shops and claiming land
+The general process to claim land and make a shop follows three steps.
  1. Buy a plot of land to create a shop
  2. Gather supplies and resupply said shop
  3. Create a shop sign on a chest in your land
 
-To buy a plot of land, please contact me on Discord at **jayphen#6666**. Specify the area you want your land to be in, and I'll give you a quote for the price of that land. Please note that the closer your land is to spawn, the cheaper it is.
+To buy a plot of land, please contact me on Discord at **jayphen#6666**. Specify the area you want your land to be in, and I'll give you a quote for the price of that land. Please note that the closer your land is to spawn, the cheaper it is. Please also note that you can only create shops in the commerical region, commercial land is also cheaper than residential because it is closer to spawn.
 
 I understand that this is inconvenient, and it might change in the future, but there are benefits of this approach
 - Helps halt land claim abuse
 - Users don't have to fuss with (frankly really poorly made) land claim plugins
 
-You should still be able to sell your land to others automatically, but exactly how this will happen has not been determined as of yet.
+The procedure to create a shop is quite simple and goes as follows.
+- Place down a chest and stock it with the items you want to sell
+- Put a sign on the chest, with the first line being a price. It needs to start with a '$' character. As an example
+  - $1000 - Works
+  - $1,000 - Does not work
+  - 1000 - Does not work
 
-Anyway, after you gather supplies, you should put a sign on your chest and format it like this, I understand that it might be inconvenient, but I deem it the best approach.
+You're free to put whatever text you want on the lines below.
 
-![alt](5.png)
+You'll be sure it worked when you get a notification in chat confirming the sign placement. You will also get a notification when someone buys your item, or when the sign is destroyed.
 
-This might seem confusing, but let's explain it, line-by-line.
-
-When creating a sign, always leave the first line empty.
-
-The second line specifies the quantity you want to sell, in that example, they are selling `64` items at a time.
-
-With the next line, you specify the buy and sell price. `B` for `Buy`, then the amount of money the buy price is. **This is how much money you will make when someone goes to buy it off of you**. Then there's `S` for `Sell` **This is the amount of money you'll give them for the item**, if you don't want to give them anything for the item, just type `S free`
-
-Lastly, the `?` is for you writing which item you want to sell, if you leave this as `?` it will automatically determine the item you want to sell.
-
-Generally, follow this format.
-```
-// leave blank //
-%AMOUNT OF ITEMS YOU WANT TO SELL AT A TIME%
-B %PRICE YOU'LL SELL IT FOR% : S %PRICE YOU'LL BUY IT FOR%
-?
-```
-
-As a specific example if that literally made no sense, say I wanted to sell 10 diamonds for $3 each, and if someone wanted to give me diamonds, I'd pay them $1 for 10 diamonds, I could make a sign that looks like this.
-```
- 
-10
-B 3: S 1
-?
-```
-
-You'll get a notification when someone buys your item.
+## What's the IP?
+mc.jayphen.xyz (server not set up yet, if you join you'll see an old SMP)
 
 ## How can I be added to the whitelist?
-DM **jayphen#6666**.
+DM **jayphen#6666** on Discord.
 
 ## Bug Bounty
 
-If you report a bug, you will be sent a fair, large sum of money, depending on what the issue is. The most important issues I care about are related to money duplication.
+If you report a bug, you will be sent a fair, large sum of money (in-game), depending on what the issue is. The most important issues I care about are related to money duplication.
 
 DM **jayphen#6666** on Discord for further information.
 
@@ -202,3 +234,6 @@ The most important, and most general rule is "don't be an idiot". Chances are if
  - Killing without reason
  - Exploiting
  - Cheating
+
+Please note that I reserve the right to ban anyone for any reason. Depending on the severity of the rule you've broken, your accounts progress might be reset.
+</div>
